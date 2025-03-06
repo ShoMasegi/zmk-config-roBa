@@ -41,9 +41,9 @@
         Default {
             bindings = <
 &kp Q             &kp W       &kp E         &kp R                &kp T                                              &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A       &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp MINUS            &kp H        &kp J  &kp K      &kp L    &lt 5 LS(SEMI)
+&mt LCTRL A       &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp ESC              &kp H        &kp J  &kp K      &kp L    &lt 5 LS(SEMI)
 &mt LEFT_SHIFT Z  &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_1  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_2  &lt 3 ENTER                             &lt 6 ESC
+&kp LCTRL         &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_1  &lt 3 ENTER                             &lt 6 MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
