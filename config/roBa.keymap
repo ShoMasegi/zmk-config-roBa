@@ -40,10 +40,10 @@
 
         Default {
             bindings = <
-&kp Q             &kp W       &kp E         &kp R                &kp T                                              &kp Y        &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A       &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp ESC              &kp H        &kp J  &kp K      &kp L    &lt 5 LS(SEMI)
-&mt LEFT_SHIFT Z  &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_1  &lt 3 ENTER                             &lt 6 MINUS
+&kp Q      &kp W       &kp E         &kp R                &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 5 P
+&kp A      &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp ESC              &kp H        &kp J  &kp K      &kp L    &mt RCTRL LS(SEMI)
+&kp Z      &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SLASH
+&kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_1  &lt 3 ENTER                             &lt 6 MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -51,10 +51,10 @@
 
         Symbols {
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                      &trans  &trans  &kp LPAR  &kp RPAR  &kp BSLH
-&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans  &trans  &trans  &kp LBRC  &kp RBRC  &kp SQT
-&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans  &trans  &trans  &kp LBKT  &kp RBKT  &kp DQT
-&trans     &trans    &trans       &trans     &trans  &trans      &trans  &trans                              &trans
+&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                        &trans  &kp MINUS  &kp LPAR  &kp RPAR  &kp BSLH
+&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans    &trans  &kp UNDER  &kp LBRC  &kp RBRC  &kp SQT
+&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans    &trans  &trans     &kp LBKT  &kp RBKT  &kp DQT
+&trans     &trans    &trans       &trans     &trans  &trans      &kp RCMD  &trans                                 &trans
             >;
         };
 
