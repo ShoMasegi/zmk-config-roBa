@@ -38,6 +38,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
     };
@@ -47,10 +48,10 @@
 
         Default {
             bindings = <
-&kp Q      &kp W       &kp E         &kp R                &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 5 P
-&kp A      &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp ESC              &kp H        &kp J  &kp K      &kp L    &mt RCTRL LS(SEMI)
-&kp Z      &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &kp RSHIFT
-&kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_1  &lt 3 ENTER                             &lt 6 MINUS
+&kp Q      &kp W       &kp E         &kp R    &kp T                                             &kp Y     &kp U  &kp I      &kp O    &lt 5 P
+&kp A      &kp S       &kp D         &kp F    &kp G     &lt 1 ESC             &kp BACKSPACE     &kp H     &kp J  &kp K      &kp L    &mt RCTRL LS(SEMI)
+&kp Z      &kp X       &kp C         &kp V    &kp B     &lt 3 LANGUAGE_2      &lt 2 LANGUAGE_1  &kp N     &kp M  &kp COMMA  &kp DOT  &kp RSHIFT
+&kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp TAB  &kp LCMD  &kp ENTER             &kp SPACE         &kp RCMD                             &lt 6 MINUS
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -58,19 +59,19 @@
 
         Symbols {
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                        &trans            &kp MINUS          &kp LPAR  &kp RPAR  &kp BSLH
-&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans    &trans            &kp UNDER          &kp LBRC  &kp RBRC  &kp QUESTION
-&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &trans
-&trans     &trans    &trans       &trans     &trans  &trans      &kp RCMD  &trans                                                   &trans
+&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                      &trans            &kp MINUS          &kp LPAR  &kp RPAR  &kp BSLH
+&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans  &trans            &kp UNDER          &kp LBRC  &kp RBRC  &kp QUESTION
+&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &trans
+&trans     &trans    &trans       &trans     &trans  &trans      &trans  &trans                                                   &trans
             >;
         };
 
         Num+Func {
             bindings = <
-&trans  &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                                                  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
-&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans           &kp LC(LA(KP_NUMBER_0))      &trans    &kp F6   &kp F7   &kp F8   &kp F9   &trans
-&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans                       &trans    &kp ESC  &kp F10  &kp F11  &kp F12  &trans
-&trans  &trans           &trans           &trans           &trans           &trans                       &sk RCMD  &trans                              &trans
+&trans  &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                                                &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans           &kp LC(LA(KP_NUMBER_0))      &trans  &kp F6   &kp F7   &kp F8   &kp F9   &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans                       &trans  &kp ESC  &kp F10  &kp F11  &kp F12  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                       &trans  &trans                              &trans
             >;
         };
 
@@ -87,10 +88,10 @@
 
         Mouse {
             bindings = <
-&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R        &to_layer_0 T                                   &trans  &trans    &trans     &trans    &trans
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F        &to_layer_0 G      &trans               &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V        &to_layer_0 B      &trans               &trans  &trans  &mkp MB4  &kp LG(W)  &mkp MB5  &trans
-&trans         &trans         &trans         &mt LCMD LANGUAGE_1  &to_layer_0 SPACE  &to_layer_0 TAB      &trans  &trans                                 &trans
+&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R    &to_layer_0 T                                                         &trans            &trans    &trans     &trans    &trans
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F    &to_layer_0 G     &to_layer_0 ESC             &to_layer_0 BACKSPACE   &trans            &mkp MB1  &mkp MB3   &mkp MB2  &trans
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V    &to_layer_0 B     &to_layer_0 LANGUAGE_2      &to_layer_0 LANGUAGE_1  &trans            &mkp MB4  &kp LG(W)  &mkp MB5  &trans
+&trans         &trans         &trans         &to_layer_0 TAB  &to_layer_0 LCMD  &to_layer_0 ENTER           &to_layer_0 SPACE       &to_layer_0 RCMD                                 &trans
             >;
         };
 
