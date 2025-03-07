@@ -77,8 +77,8 @@
 
         Symbols {
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                      &trans            &kp MINUS          &kp LPAR  &kp RPAR  &kp BSLH
-&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans  &trans            &kp UNDER          &kp LBRC  &kp RBRC  &kp QUESTION
+&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                      &kp PLUS          &kp MINUS          &kp LPAR  &kp RPAR  &kp BSLH
+&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans  &kp EQUAL         &kp UNDER          &kp LBRC  &kp RBRC  &kp QUESTION
 &trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &trans
 &trans     &trans    &trans       &trans     &trans  &trans      &trans  &trans                                                   &trans
             >;
