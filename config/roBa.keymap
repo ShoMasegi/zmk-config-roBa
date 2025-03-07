@@ -8,7 +8,7 @@
 #define NUM 6
 
 &mt {
-    flavor = "balanced";
+    flavor = "hold-preferred";
     quick-tap-ms = <0>;
 };
 
@@ -33,6 +33,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
     };
 
     keymap {
@@ -42,19 +49,19 @@
             bindings = <
 &kp Q      &kp W       &kp E         &kp R                &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 5 P
 &kp A      &kp S       &kp D         &kp F                &kp G      &kp LS(LG(S))      &kp ESC              &kp H        &kp J  &kp K      &kp L    &mt RCTRL LS(SEMI)
-&kp Z      &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SLASH
+&kp Z      &kp X       &kp C         &kp V                &kp B      &lt 2 EQUAL        &kp BACKSPACE        &kp N        &kp M  &kp COMMA  &kp DOT  &kp RSHIFT
 &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &lt 1 TAB          &mt RCMD LANGUAGE_1  &lt 3 ENTER                             &lt 6 MINUS
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         Symbols {
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                        &trans  &kp MINUS  &kp LPAR  &kp RPAR  &kp BSLH
-&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans    &trans  &kp UNDER  &kp LBRC  &kp RBRC  &kp SQT
-&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans    &trans  &trans     &kp LBKT  &kp RBKT  &kp DQT
-&trans     &trans    &trans       &trans     &trans  &trans      &kp RCMD  &trans                                 &trans
+&kp TILDE  &kp EXCL  &kp AT       &kp HASH   &trans                        &trans            &kp MINUS          &kp LPAR  &kp RPAR  &kp BSLH
+&kp GRAVE  &kp DLLR  &kp PERCENT  &kp CARET  &trans  &trans      &trans    &trans            &kp UNDER          &kp LBRC  &kp RBRC  &kp QUESTION
+&trans     &kp AMPS  &kp ASTRK    &trans     &trans  &trans      &trans    &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp LBKT  &kp RBKT  &trans
+&trans     &trans    &trans       &trans     &trans  &trans      &kp RCMD  &trans                                                   &trans
             >;
         };
 
@@ -63,7 +70,7 @@
 &trans  &kp KP_N1        &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans                                                  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5
 &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans           &kp LC(LA(KP_NUMBER_0))      &trans    &kp F6   &kp F7   &kp F8   &kp F9   &trans
 &trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans                       &trans    &kp ESC  &kp F10  &kp F11  &kp F12  &trans
-&trans  &trans           &trans           &trans           &trans           &trans                       &kp RCMD  &trans                              &trans
+&trans  &trans           &trans           &trans           &trans           &trans                       &sk RCMD  &trans                              &trans
             >;
         };
 
