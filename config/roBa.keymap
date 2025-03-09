@@ -97,18 +97,18 @@
         Mouse {
             bindings = <
 &to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R    &to_layer_0 T                                                         &trans  &trans    &trans     &trans    &trans
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F    &to_layer_0 G     &to_layer_0 ESC             &to_layer_0 BACKSPACE   &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V    &to_layer_0 B     &to_layer_0 LANGUAGE_2      &to_layer_0 LANGUAGE_1  &trans  &mkp MB4  &kp LG(W)  &mkp MB5  &trans
+&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F    &to_layer_0 G     &to_layer_0 ESC             &to_layer_0 BACKSPACE   &trans  &mkp MB1  &mkp MB3   &mkp MB2  &msc SCRL_UP
+&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V    &to_layer_0 B     &to_layer_0 LANGUAGE_2      &to_layer_0 LANGUAGE_1  &trans  &mkp MB4  &kp LG(W)  &mkp MB5  &msc SCRL_DOWN
 &trans         &trans         &trans         &to_layer_0 TAB  &to_layer_0 LCMD  &to_layer_0 SPACE           &to_layer_0 RCMD        &to 0                                  &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mkp MB3  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
