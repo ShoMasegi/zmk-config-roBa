@@ -13,7 +13,7 @@
     quick-tap-ms = <0>;
 };
 
-&lt { tapping-term-ms = <125>; };
+&lt { tapping-term-ms = <175>; };
 
 / {
     combos {
@@ -55,7 +55,7 @@
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <125>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
