@@ -15,7 +15,6 @@
 
 &lt {
     tapping-term-ms = <125>;
-    quick-tap;
 };
 
 / {
@@ -53,6 +52,15 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
+        };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
     };
 
