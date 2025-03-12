@@ -51,6 +51,13 @@
 
             tap-ms = <20>;
         };
+
+        zoom_in_out: zoom_in_out {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ZOOM_IN_OUT";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_AC_ZOOM_IN>, <&kp C_AC_ZOOM_OUT>;
+        };
     };
 
     keymap {
@@ -64,7 +71,7 @@
 &kp LCTRL     &kp LSHIFT  &kp LEFT_ALT  &kp TAB  &kp ENTER  &mt LCMD LANGUAGE_2      &kp SPACE      &mt RCMD LANGUAGE_1                             &lt 6 MINUS
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&zoom_in_out>;
         };
 
         Symbols {
