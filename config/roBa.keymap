@@ -52,13 +52,14 @@
             tap-ms = <20>;
         };
 
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+        scroll_control: behavior-sensor-rotate {
+            compatible = "zmk,behavior-sensor-rotate";
+            sensor = "SENSOR_ROTATE";
+            binding-mode = "discrete";
+            bindings-negative = <&kp WH_D>; // 左に傾けたら下スクロール
+            bindings-positive = <&kp WH_U>; // 右に傾けたら上スクロール
+            scale = <1>;
+            threshold = <5>;
         };
     };
 
