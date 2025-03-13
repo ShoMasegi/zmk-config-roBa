@@ -23,11 +23,6 @@
             bindings = <&mo 5>;
             key-positions = <20 21>;
         };
-
-        bluetooth_layer {
-            bindings = <&mo 6>;
-            key-positions = <33 42>;
-        };
     };
 
     macros {
@@ -71,9 +66,9 @@
         Default {
             bindings = <
 &kp Q         &kp W       &kp E         &kp R    &kp T                                              &kp Y                &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A   &kp S       &kp D         &kp F    &kp G      &none                    &lt 2 MINUS    &kp H                &kp J  &kp K      &kp L    &mt RCTRL COLON
+&mt LCTRL A   &kp S       &kp D         &kp F    &kp G      &lt 3 ESC                &lt 2 MINUS    &kp H                &kp J  &kp K      &kp L    &mt RCTRL COLON
 &mt LSHIFT Z  &kp X       &kp C         &kp V    &kp B      &mo 1                    &kp BACKSPACE  &kp N                &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SEMI
-&kp LCTRL     &kp LSHIFT  &kp LEFT_ALT  &kp TAB  &kp ENTER  &mt LCMD LANGUAGE_2      &kp SPACE      &mt RCMD LANGUAGE_1                             &lt 3 ESC
+&kp LCTRL     &kp LSHIFT  &kp LEFT_ALT  &kp TAB  &kp ENTER  &mt LCMD LANGUAGE_2      &kp SPACE      &mt RCMD LANGUAGE_1                             &lt 6 ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
