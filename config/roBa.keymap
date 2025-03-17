@@ -58,6 +58,16 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp C_AC_ZOOM_IN>, <&kp C_AC_ZOOM_OUT>;
         };
+
+        hmt: hold_preferred_mod_atap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-preferred Mod Tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -65,10 +75,10 @@
 
         Default {
             bindings = <
-&kp Q         &kp W       &kp E         &kp R                &kp T                                          &kp Y      &kp U  &kp I      &kp O    &kp P
-&mt LCTRL A   &kp S       &kp D         &kp F                &kp G      &lt 3 ESC      &lt 2 MINUS          &kp H      &kp J  &kp K      &kp L    &mt RCTRL COLON
-&mt LSHIFT Z  &kp X       &kp C         &kp V                &kp B      &mo 1          &kp BACKSPACE        &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SEMI
-&kp LCTRL     &kp LSHIFT  &kp LEFT_ALT  &mt LCMD LANGUAGE_2  &kp SPACE  &kp TAB        &mt RCMD LANGUAGE_1  &kp ENTER                             &lt 6 ESC
+&kp Q         &kp W       &kp E         &kp R                 &kp T                                           &kp Y      &kp U  &kp I      &kp O    &kp P
+&mt LCTRL A   &kp S       &kp D         &kp F                 &kp G      &lt 3 ESC      &lt 2 MINUS           &kp H      &kp J  &kp K      &kp L    &mt RCTRL COLON
+&mt LSHIFT Z  &kp X       &kp C         &kp V                 &kp B      &mo 1          &kp BACKSPACE         &kp N      &kp M  &kp COMMA  &kp DOT  &mt RSHIFT SEMI
+&kp LCTRL     &kp LSHIFT  &kp LEFT_ALT  &hmt LCMD LANGUAGE_2  &kp SPACE  &kp TAB        &hmt RCMD LANGUAGE_1  &kp ENTER                             &lt 6 ESC
             >;
 
             sensor-bindings = <&scroll_up_down>;
