@@ -26,11 +26,18 @@
     };
 
     macros {
-        to_layer_0: to_layer_0 {
+        to_layer_0_kp: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
+        };
+
+        to_layer_0_hmt: to_layer_0_hmt {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&none &macro_param_2to1 &macro_param_2to2 &hmt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0_HMT";
         };
     };
 
@@ -38,7 +45,7 @@
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&to_layer_0>;
+            bindings = <&mo>, <&to_layer_0_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -115,10 +122,10 @@
 
         Mouse {
             bindings = <
-&to_layer_0 Q  &to_layer_0 W  &to_layer_0 E  &to_layer_0 R  &to_layer_0 T                      &trans  &trans    &trans     &trans    &trans
-&to_layer_0 A  &to_layer_0 S  &to_layer_0 D  &to_layer_0 F  &to_layer_0 G  &trans      &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2  &trans
-&to_layer_0 Z  &to_layer_0 X  &to_layer_0 C  &to_layer_0 V  &to_layer_0 B  &trans      &trans  &trans  &mkp MB4  &kp LG(W)  &mkp MB5  &trans
-&trans         &trans         &trans         &trans         &trans         &trans      &trans  &to 0                                  &trans
+&to_layer_0_kp Q  &to_layer_0_kp W  &to_layer_0_kp E  &to_layer_0_kp R    &to_layer_0_kp T                                                                         &trans                                    &trans    &trans     &trans    &trans
+&to_layer_0_kp A  &to_layer_0_kp S  &to_layer_0_kp D  &to_layer_0_kp F    &to_layer_0_kp G                         &trans                    &trans                &trans                                    &mkp MB1  &mkp MB3   &mkp MB2  &trans
+&to_layer_0_kp Z  &to_layer_0_kp X  &to_layer_0_kp C  &to_layer_0_kp V    &to_layer_0_kp B                         &trans                    &trans                &trans                                    &mkp MB4  &kp LG(W)  &mkp MB5  &trans
+&trans            &trans            &trans            &to_layer_0_kp TAB  &to_layer_0_hmt LEFT_COMMAND LANGUAGE_2  &to_layer_0_kp SPACE      &to_layer_0_kp SPACE  &to_layer_0_hmt RIGHT_COMMAND LANGUAGE_1                                 &trans
             >;
         };
 
