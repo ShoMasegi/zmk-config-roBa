@@ -36,7 +36,7 @@
         to_layer_0_hmt: to_layer_0_hmt {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&to 0 &macro_param_2to1 &macro_param_2to2 &hmt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &macro_param_2to2 &hmt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0_HMT";
         };
     };
