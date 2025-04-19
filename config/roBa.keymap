@@ -32,13 +32,6 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
-
-        to_layer_0_hmt: to_layer_0_hmt {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings = <&to 0 &macro_param_1to1 &macro_param_2to2 &hmt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0_HMT";
-        };
     };
 
     behaviors {
@@ -89,6 +82,16 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HMT_COLON";
             bindings = <&kp>, <&rev_colon>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+        };
+
+        to_layer_0_hmt: to_layer_0_hmt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TO_LAYER_0_HMT";
+            bindings = <&to_layer_0_kp>, <&to_layer_0_kp>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
