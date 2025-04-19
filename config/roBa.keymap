@@ -77,6 +77,24 @@
         };
     };
 
+    key-overrides {
+        semicolon_to_colon {
+            compatible = "zmk,key-override";
+            modifiers = <0>; // no modifiers (plain press)
+            layers = <0>; // 適用するレイヤー（例: 0）
+            from = <&kp SEMI>; // ; キーが押されたとき
+            to = <&sk LS(&kp SEMI)>; // Shift + ;（＝:）に変換
+        };
+
+        colon_to_semicolon {
+            compatible = "zmk,key-override";
+            modifiers = <MOD_LSFT>; // Shiftが押されているとき
+            layers = <0>;
+            from = <&kp SEMI>;
+            to = <&kp SEMI>; // Shiftは無視してセミコロンだけ送る
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
